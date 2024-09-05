@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+}
+
+h3 {
+    color: #006769;
+}
+
+a {
+    background-color: #fff;
+    color: #006769;
+    border: 2px solid #006769;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: #006769;
+    color: #fff;
+  }
+
+

@@ -1,0 +1,213 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #006769;
+    color: #fff;
+    padding: 10px;
+}
+
+.carousel {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    aspect-ratio: 16/9; /* Mantiene la proporción del carrusel */
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slides {
+    display: flex;
+    width: 100%;
+    animation: slide 20s infinite;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(0); }
+    25% { transform: translateX(-100%); }
+    45% { transform: translateX(-100%); }
+    50% { transform: translateX(-200%); }
+    70% { transform: translateX(-200%); }
+    75% { transform: translateX(-300%); }
+    95% { transform: translateX(-300%); }
+    100% { transform: translateX(0); }
+}
+
+.title_1 {
+    color: #fff;
+}
+
+.title_2 {
+    color: #000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Para que los elementos se envuelvan en pantallas pequeñas */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+section {
+    padding: 40px 10%;
+    text-align: center;
+}
+
+#welcome {
+    background: #CAF4FF;
+}
+
+#courses {
+    background: #006769;
+}
+
+.courses {
+    background: #CAF4FF;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contact {
+    background: #CAF4FF;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: grid;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    max-width: 500px; /* Establece un máximo para que no sea demasiado grande */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #1A5319;
+    outline: none;
+}
+
+button[type="submit"] {
+    width: 100%;
+    max-width: 500px; /* Establece un máximo para que no sea demasiado grande */
+    padding: 10px;
+    background-color: #006769;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #40A578;
+}
+
+a {
+    background-color: #fff;
+    color: #006769;
+    border: 2px solid #006769;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: #006769;
+    color: #fff;
+}
+
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+}
+
+.cont-sources {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajuste automático */
+}
+
+.cont-sources div {
+    margin: 20px;
+    padding: 20px;
+}
+
+.title_1 {
+    grid-column: 1 / -1;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+    .carousel {
+        height: auto;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    button[type="submit"] {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .cont-courses {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .carousel {
+        height: 300px;
+    }
+}
